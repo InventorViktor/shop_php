@@ -13,6 +13,6 @@
                             );
     } catch (Exception $error){
 
-        //lubie placki
+        echo $error->getMessage(); //TODO: usunąć tą linijkę
         exit('Database error');
     }
