@@ -85,7 +85,7 @@
             </form>
 
             <div class="mt-3 text-center">
-                Masz już konto? <a href="login.php">Zaloguj się</a>
+                Masz już konto? <a href="login_page.php">Zaloguj się</a>
             </div>
 
         </section>
