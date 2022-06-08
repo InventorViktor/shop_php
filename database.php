@@ -9,6 +9,7 @@
                             charset=utf8",
                             $user,
                             $password,
+                            array(PDO::ATTR_EMULATE_PREPARES => false)
                             );
     } catch (Exception $error){
 
