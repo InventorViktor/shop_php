@@ -1,5 +1,6 @@
 <?php
-    $host = "localhost";
-    $user = 'root';
-    $password = '';
-    $database = 'sklep';
+    return array(
+        'host' => 'localhost',
+        'user' => 'root',
+        'password' => '',
+        'database' => 'sklep');

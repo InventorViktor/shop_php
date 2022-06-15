@@ -1,14 +1,14 @@
 <?php
 
-    require_once 'config_connection_db.php';
+    $connect =  require_once 'config_connection_db.php';
 
     try{
 
-        $db = new PDO("mysql:host={$host};
-                            dbname={$database};
+        $db = new PDO("mysql:host={$connect['host']};
+                            dbname={$connect['database']};
                             charset=utf8",
-                            $user,
-                            $password,
+                            $connect['user'],
+                            $connect['password'],
                             array(PDO::ATTR_EMULATE_PREPARES => false)
                             );
     } catch (Exception $error){
