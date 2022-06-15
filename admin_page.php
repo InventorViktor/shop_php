@@ -27,7 +27,9 @@
         <select name="type">
             <option value="baton">baton</option>
             <option value="lizak">lizak</option>
-        </select>
+        </select><br>
+        obraz: <input type="file" name="jpg">
+
         <br>
 
         <input type="submit">
