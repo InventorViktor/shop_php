@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -61,11 +65,11 @@
     </header>
 
     <main>
-
-        <?php
-            echo $_GET['id'];
-        ?>
-
+        <div class="row">
+            <?php
+                require_once 'product_more_info.php';
+            ?>
+        </div>
     </main>
 
     <footer class="card-footer text-center border border-top-0 border-dark">
