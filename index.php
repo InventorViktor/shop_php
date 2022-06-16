@@ -26,7 +26,7 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item active">
-                        <a href="index.php" class="nav-link"> Start</a>
+                        <a href="#" class="nav-link"> Start</a> <!-- TODO: add href -->
                     </li>
 
                     <li class="nav-item dropdown">
@@ -51,7 +51,7 @@
 
                 </form>
 
-                <a href="login_page.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a> <!-- TODO: add href -->
+                <a href="login.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a> <!-- TODO: add href -->
 
             </div>
 
