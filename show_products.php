@@ -19,7 +19,7 @@ while($row = $result->fetch()){
                 <h5 class='card-title'>{$row['nazwa']}</h5>
                 <p class='card-text'>{$row['k_opis']}</p>
                 <p class='card-text'>{$row['cena']} zł</p>
-                <a href='product_page.php?id={$row['id']}' class='btn btn-primary stretched-link'>Zobacz</a>
+                <a href='product_page.php?id={$row['id']}' class='btn btn-outline-primary stretched-link'>Zobacz</a>
             </div>
           </div>";
 

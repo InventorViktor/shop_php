@@ -41,7 +41,7 @@
     <main>
         <section>
 
-            <form style="max-width: 400px; margin: auto;"> <!-- TODO: add action and method -->
+            <form style="max-width: 400px; margin: auto;" method="post" action="login.php">
                 <div class="mb-3 mt-2 text-center">
                     <h1 class="h4">Zaloguj się</h1>
                 </div>
@@ -49,13 +49,13 @@
                 <div class="mb-2">
 
                     <label>Login:</label>
-                    <input type="email" class="form-control" required autofocus>
+                    <input name="login" type="email" class="form-control" required autofocus>
 
                 </div>
 
                 <div class="mb-4">
                     <label>Hasło:</label>
-                    <input type="password" class="form-control" required>
+                    <input name="password" type="password" class="form-control" required>
 
                 </div>
 

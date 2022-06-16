@@ -56,13 +56,6 @@
 
                 <div class="mb-2">
 
-                    <label>Nazwisko:</label>
-                    <input type="text" class="form-control" required>
-
-                </div>
-
-                <div class="mb-2">
-
                     <label>email:</label>
                     <input type="email" class="form-control" required>
 
