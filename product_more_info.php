@@ -1,4 +1,8 @@
 <?php
+    if(!isset($_GET['id'])){
+        header('Location: index.php');
+        exit();
+    }
 
     //you need $_GET['id']
     require_once 'database.php';
