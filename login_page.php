@@ -63,7 +63,7 @@
             </form>
 
             <div class="mt-3 text-center">
-                Nie masz konta? <a href="rejestracja.php">Zarejestruj się</a>
+                Nie masz konta? <a href="register_page.php">Zarejestruj się</a>
             </div>
 
         </section>
