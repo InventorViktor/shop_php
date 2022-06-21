@@ -4,7 +4,7 @@
         exit();
     }
 
-    //you need $_GET['id']
+    //you need $_GET['id'] -> product id
     require_once 'database.php';
 
     $more_info = $db->prepare('SELECT nazwa, cena, d_opis, obraz FROM produkty WHERE id = :id');
@@ -22,7 +22,7 @@
         </aside>";
 
     echo
-        '<div class="col-md-8">
+        '<div class="col-md-8 text-wrap text-break">
             '. $product_row["d_opis"] .'
         </div>';
 
