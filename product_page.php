@@ -70,6 +70,15 @@
                 require_once 'product_more_info.php';
             ?>
         </div>
+
+        <section class="border-top">
+                <header class="fs-2 text-center"> Komentarze </header>
+                <?php
+                require_once 'product_comments.php';
+                ?>
+
+        </section>
+
     </main>
 
     <footer class="card-footer text-center border border-top-0 border-dark">
