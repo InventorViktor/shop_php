@@ -30,20 +30,7 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item active">
-                        <a href="index.php" class="nav-link"> Start</a> <!-- TODO: add href -->
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"> Kategorie</a> <!-- TODO: add href -->
-
-                        <div class="dropdown-menu">
-
-                            <a class="dropdown-item" href="#"> Czekolady</a> <!-- TODO: add href x3 -->
-                            <a class="dropdown-item" href="#"> Lizaki</a>
-                            <a class="dropdown-item" href="#"> Żelki</a>
-
-                        </div>
-
+                        <a href="index.php" class="nav-link"> Start</a>
                     </li>
 
                 </ul>
@@ -55,7 +42,16 @@
 
                 </form>
 
-                <a href="login_page.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a> <!-- TODO: add href -->
+                <?php
+                if(!isset($_SESSION['is_logged'])){
+
+                    echo '<a href="login_page.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a>';
+
+                } else {
+
+                    echo '<a href="logout_user.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
+                }
+                ?>
 
             </div>
 

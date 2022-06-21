@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(isset($_SESSION['is_logged'])){
+
+    header('Location: index.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -58,6 +68,14 @@
                     <input name="password" type="password" class="form-control" required>
 
                 </div>
+
+                <?php
+                    if(isset($_SESSION['login_err'])){
+
+                        echo "<span style='color: red;'>{$_SESSION['login_err']}</span>";
+                        unset($_SESSION['login_err']);
+                    }
+                ?>
 
                 <button class="btn btn-outline-success btn-block" type="submit">Zaloguj</button>
             </form>

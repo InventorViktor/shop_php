@@ -7,11 +7,11 @@ session_start();
         exit();
     }
 
-//    if(isset($_SESSION['is_logged'])){
-//
-//        header('Location: index.php');
-//        exit();
-//    }
+    if(isset($_SESSION['is_logged'])){
+
+        header('Location: index.php');
+        exit();
+    }
 
     if(isset($_POST['login'])){
 
@@ -25,8 +25,6 @@ session_start();
 
         $result = $userQuerry->fetch();
 
-        echo $result['password'];
-        echo $password;
         if($userQuerry->rowCount() == 1){
 
             if($result['password'] == $password && $result['id'] == 1){  //TODO : zamienić na password_verify jak będą w bazie hasła zahaszowane
@@ -35,23 +33,28 @@ session_start();
                 header('Location: admin_page.php');
                 exit();
             }
-//            elseif ($result['password'] == $password){
-//
-//                $_SESSION['is_logged'] = true;
-//                header('Location: index.php');    //TODO: USER LOGIN
-//                exit();
-//            }
-            else{
+            elseif ($result['password'] == $password){
+
+                $_SESSION['is_logged'] = true;
+                header('Location: index.php');
+                exit();
+            } else {
 
                 header('Location: login_page.php');
+                $_SESSION['login_err'] = 'Login albo hasło jest niepoprawne';
                 exit();
             }
+
+        } else {
+
+            header('Location: login_page.php');
+            $_SESSION['login_err'] = 'Login albo hasło jest niepoprawne';
+            exit();
         }
 
     } else {
 
         header('Location: login_page.php');
-       // $_SESSION['login_err'] =
         exit();
     }
 

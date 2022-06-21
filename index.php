@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -50,7 +54,16 @@
 
                 </form>
 
-                <a href="login.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a> <!-- TODO: add href -->
+                <?php
+                    if(!isset($_SESSION['is_logged'])){
+
+                        echo '<a href="login_page.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a>';
+
+                    } else {
+
+                        echo '<a href="logout_user.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
+                    }
+                ?>
 
             </div>
 
