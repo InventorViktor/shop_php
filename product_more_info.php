@@ -22,7 +22,7 @@
         </aside>";
 
     echo
-        '<div class="col-md-8 text-wrap text-break">
+        '<div class="col-md-8">
             '. $product_row["d_opis"] .'
         </div>';
 

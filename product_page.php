@@ -67,7 +67,7 @@
             ?>
         </div>
 
-        <section class="border-top">
+        <section class="border-top mt-5">
                 <header class="fs-2 text-center"> Komentarze </header>
                 <?php
                 require_once 'product_comments.php';

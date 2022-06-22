@@ -35,7 +35,7 @@ session_start();
             }
             elseif ($result['password'] == $password){
 
-                $_SESSION['is_logged'] = true;
+                $_SESSION['is_logged'] = $result['id'];
                 header('Location: index.php');
                 exit();
             } else {
