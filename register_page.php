@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -41,7 +45,7 @@
     <main>
         <section>
 
-            <form style="max-width: 400px; margin: auto;"> <!-- TODO: add action and method -->
+            <form style="max-width: 400px; margin: auto;" method="post" action="register.php">
 
                 <div class="mb-3 mt-2 text-center">
                     <h1 class="h4">Zarejestruj się</h1>
@@ -50,29 +54,53 @@
                 <div class="mb-2">
 
                     <label>Imię:</label>
-                    <input type="text" class="form-control" required autofocus>
+                    <input type="text" name="name" class="form-control" required autofocus>
 
                 </div>
+
+                <?php
+                    if(isset($_SESSION['name_err'])){
+
+                        echo "<div class='text-danger'>{$_SESSION['name_err']}</div>";
+                        unset($_SESSION['name_err']);
+                    }
+                ?>
 
                 <div class="mb-2">
 
                     <label>email:</label>
-                    <input type="email" class="form-control" required>
+                    <input type="email" name="email" class="form-control" required>
 
                 </div>
+
+                <?php
+                if(isset($_SESSION['email_err'])){
+
+                    echo "<div class='text-danger'>{$_SESSION['email_err']}</div>";
+                    unset($_SESSION['email_err']);
+                }
+                ?>
 
                 <div class="mb-2">
 
                     <label>Hasło:</label>
-                    <input type="password" class="form-control" required>
+                    <input type="password" name="password" class="form-control" required>
 
                 </div>
 
                 <div class="mb-4">
                     <label>Powtórz hasło:</label>
-                    <input type="password" class="form-control" required>
+                    <input type="password" name="password_2" class="form-control" required>
 
                 </div>
+
+                <?php
+                if(isset($_SESSION['password_err'])){
+
+                    echo "<div class='text-danger'>{$_SESSION['password_err']}</div>";
+                    unset($_SESSION['password_err']);
+                }
+                ?>
 
                 <button class="btn btn-outline-success btn-block" type="submit">Zarejestruj się</button>
             </form>
