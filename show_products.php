@@ -1,17 +1,28 @@
 <?php
 require_once 'database.php';
 
-$query = "SELECT * FROM produkty";
+//sort product
+if(!isset($_GET['type'])){
 
-$result =  $db->query($query);
+    $sort =  $db->query("SELECT * FROM produkty");
+}
+elseif($_GET['type'] == 'all'){
 
-if (!$result){
+    $sort =  $db->query("SELECT * FROM produkty");
+} else {
 
-    echo "BŁĄD w zapytaniu";
-    exit;
+    $sort = $db->prepare("SELECT * FROM produkty WHERE type = :type");
+    $sort->bindValue(':type', $_GET['type']);
+    $sort->execute();
 }
 
-while($row = $result->fetch()){
+if (!$sort){
+
+    echo "BŁĄD w zapytaniu";
+    exit();
+}
+
+while($row = $sort->fetch()){
 
     echo "<div class='card col-sm-6 col-md-4 col-lg-3'>
             <img src='img/{$row['obraz']}' class='card-img-top' alt='img/produktu'>

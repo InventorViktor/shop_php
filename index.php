@@ -33,13 +33,13 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"> Kategorie</a> <!-- TODO: add href -->
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"> Kategorie</a>
 
                         <div class="dropdown-menu">
 
-                            <a class="dropdown-item" href="#"> Czekolady</a> <!-- TODO: add href x3 -->
-                            <a class="dropdown-item" href="#"> Lizaki</a>
-                            <a class="dropdown-item" href="#"> Żelki</a>
+                            <a class="dropdown-item" href="index.php?type=all"> Wszystko</a>
+                            <a class="dropdown-item" href="index.php?type=baton"> Batoniki</a>
+                            <a class="dropdown-item" href="index.php?type=lizak"> Lizaki</a>
 
                         </div>
 
