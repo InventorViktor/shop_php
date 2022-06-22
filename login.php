@@ -15,8 +15,8 @@ session_start();
 
     if(isset($_POST['login'])){
 
-        $login = filter_input(INPUT_POST, 'login');
-        $password = filter_input(INPUT_POST, 'password');;
+        $login = htmlspecialchars($_POST['login']);
+        $password = htmlspecialchars($_POST['password']);
 
         require_once 'database.php';
         $userQuerry = $db->prepare('SELECT id, password FROM users WHERE email = :login');
