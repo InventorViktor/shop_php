@@ -4,7 +4,7 @@ if(isset($_POST['comment']) && $_POST['comment'] != "") {
 
     require_once 'database.php';
 
-    $text = filter_input(INPUT_POST, 'comment');
+    $text = htmlspecialchars($_POST['comment']);
 
     $userComment = $db->prepare('INSERT INTO comments VALUES (NULL,
                                                                     :id,
