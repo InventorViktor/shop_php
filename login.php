@@ -27,13 +27,13 @@ session_start();
 
         if($userQuerry->rowCount() == 1){
 
-            if($result['password'] == $password && $result['id'] == 1){  //TODO : zamienić na password_verify jak będą w bazie hasła zahaszowane
+            if(password_verify($password, $result['password']) && $result['id'] == 1){
 
                 $_SESSION['admin_is_logged'] = true;
                 header('Location: admin_page.php');
                 exit();
             }
-            elseif ($result['password'] == $password){
+            elseif (password_verify($password, $result['password'])){
 
                 $_SESSION['is_logged'] = $result['id'];
                 header('Location: index.php');
