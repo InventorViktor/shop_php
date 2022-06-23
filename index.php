@@ -29,7 +29,7 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item active">
-                        <a href="#" class="nav-link"> Start</a> <!-- TODO: add href -->
+                        <a href="index.php" class="nav-link"> Start</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -60,7 +60,8 @@
                         echo '<a href="login_page.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a>';
 
                     } else {
-
+                        echo '<a href="#" class="btn btn-outline-light button-margin mr-3" role="button">Koszyk</a>';
+                        echo '<a href="user_options.php" class="btn btn-outline-light button-margin mr-3" role="button">Konto</a>';
                         echo '<a href="logout_user.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
                     }
                 ?>
