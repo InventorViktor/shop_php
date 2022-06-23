@@ -60,7 +60,7 @@
                         echo '<a href="login_page.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a>';
 
                     } else {
-                        echo '<a href="#" class="btn btn-outline-light button-margin mr-3" role="button">Koszyk</a>';
+                        echo '<a href="cart_page.php" class="btn btn-outline-light button-margin mr-3" role="button">Koszyk</a>';
                         echo '<a href="user_options.php" class="btn btn-outline-light button-margin mr-3" role="button">Konto</a>';
                         echo '<a href="logout_user.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
                     }
