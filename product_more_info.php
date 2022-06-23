@@ -29,7 +29,7 @@
     if(isset($_SESSION['is_logged'])){
 
         echo
-        '<button class="btn btn-outline-success">Dodaj do koszyka</button>';
+        '<button class="btn btn-outline-success mt-3">Dodaj do koszyka</button>';
     } else {
 
         echo '<p class="fw-bold">Zaloguj się aby dodać produkt do koszyka</p>';
