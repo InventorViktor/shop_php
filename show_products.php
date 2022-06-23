@@ -2,7 +2,12 @@
 require_once 'database.php';
 
 //sort product
-if(!isset($_GET['type'])){
+if(isset($_GET['search'])){
+    $sort = $db->prepare("SELECT * FROM produkty WHERE nazwa = :name");
+    $sort->bindValue(':name', $_GET['search']);
+    $sort->execute();
+}
+elseif(!isset($_GET['type'])){
 
     $sort =  $db->query("SELECT * FROM produkty");
 }
@@ -30,7 +35,7 @@ while($row = $sort->fetch()){
                 <h5 class='card-title'>{$row['nazwa']}</h5>
                 <p class='card-text'>{$row['k_opis']}</p>
                 <p class='card-text'>{$row['cena']} zł</p>
-                <a href='product_page.php?id={$row['id']}' class='btn btn-outline-primary stretched-link'>Zobacz</a>
+                <a href='product_page.php?id={$row['id']}' class='btn btn-outline-primary stretched-link'>Zobacz</a>    
             </div>
           </div>";
 

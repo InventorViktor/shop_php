@@ -47,9 +47,9 @@
 
                 </ul>
 
-                <form class="form-inline m-auto"> <!-- TODO: add action and method -->
+                <form class="form-inline m-auto" method="get" action="index.php"> <!-- TODO: add action and method -->
 
-                    <input class="form-control mr-2 h-25" type="search" placeholder="Wyszukaj">
+                    <input class="form-control mr-2 h-25" name="search" type="search" placeholder="Wyszukaj">
                     <button type="submit" class="btn btn-outline-light">Znajdź</button>
 
                 </form>
