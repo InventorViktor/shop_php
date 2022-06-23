@@ -18,6 +18,11 @@ main
     margin-top: 15px;
 }
 
+.bigText
+{
+    font-size: xx-large;
+}
+
 .footer-border
 {
     border-bottom-left-radius: 24px;
