@@ -59,7 +59,7 @@ if(isset($_SESSION['is_logged'])){
                 <div class="mb-2">
 
                     <label>Login:</label>
-                    <input name="login" type="email" class="form-control" required autofocus>
+                    <input name="login" type="email" class="form-control" placeholder="Podaj email" required autofocus>
 
                 </div>
 
