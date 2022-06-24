@@ -30,13 +30,13 @@ session_start();
             $all_is_ok = false;
         } else {
 
-            $alreadyExist = $db->prepare('SELECT name FROM users WHERE id=:id');
-            $alreadyExist->bindValue(':id', $email);
+            $alreadyExist = $db->prepare('SELECT name FROM users WHERE email=:email');
+            $alreadyExist->bindValue(':email', $email);
             $alreadyExist->execute();
 
             if($alreadyExist->rowCount() > 0){
 
-                $_SESSION['email_is_taken'] = "Już istnieje konto z tym email!";
+                $_SESSION['email_err'] = "Już istnieje konto z tym email!";
                 $all_is_ok = false;
             }
         }
