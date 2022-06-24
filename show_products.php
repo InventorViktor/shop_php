@@ -1,5 +1,9 @@
 <?php
+//need session to work
+
 require_once 'database.php';
+
+require_once 'cart_action.php';
 
 //sort product
 if(isset($_GET['search'])){
@@ -35,8 +39,24 @@ while($row = $sort->fetch()){
                 <h5 class='card-title'>{$row['nazwa']}</h5>
                 <p class='card-text'>{$row['k_opis']}</p>
                 <p class='card-text'>{$row['cena']} zł</p>
-                <a href='product_page.php?id={$row['id']}' class='btn btn-outline-primary stretched-link'>Zobacz</a>    
-            </div>
+                <a href='product_page.php?id={$row['id']}' class='btn btn-outline-primary mt-1'>Zobacz</a>";
+
+            //add to cart for users
+            if(isset($_SESSION['is_logged'])){
+                echo "<form method='post' action='index.php?action=add&id={$row['id']}'>
+                          <input type='hidden' name='name' value='{$row['nazwa']}'>
+                          <input type='hidden' name='price' value='{$row['cena']}'>
+                          <input type='hidden' name='quantity' value='1'>
+                          <button  class='btn btn-outline-primary mt-2' name='add_to_cart' type='submit' onclick='addProduct()'>Koszyk +</button>
+                      </form>";
+            }
+
+            //delete for admin
+            if(isset($_SESSION['admin_is_logged'])){
+                echo "<a href='product_page.php?id={$row['id']}' class='btn btn-outline-danger mt-1'>Usuń</a>";  //TODO: change href
+            }
+
+    echo"   </div>
           </div>";
 
 }
