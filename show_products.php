@@ -53,7 +53,8 @@ while($row = $sort->fetch()){
 
             //delete for admin
             if(isset($_SESSION['admin_is_logged'])){
-                echo "<a href='product_page.php?id={$row['id']}' class='btn btn-outline-danger mt-1'>Usuń</a>";  //TODO: change href
+
+                echo "<a href='a_remove_product.php?id={$row['id']}'  class='btn btn-outline-danger mt-2' onclick='removeProduct()'>Usuń produkt</a>";
             }
 
     echo"   </div>

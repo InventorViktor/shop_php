@@ -11,7 +11,7 @@
 
     $removeProduct = $db->prepare('DELETE FROM produkty WHERE id = :id');
 
-    $removeProduct->bindValue(':id',$_POST["id"] );
+    $removeProduct->bindValue(':id',$_GET["id"] );
     $removeProduct->execute();
 
-    header('Location: admin_page.php');
+    header('Location: index.php');

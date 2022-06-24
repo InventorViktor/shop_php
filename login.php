@@ -1,13 +1,7 @@
 <?php
 session_start();
 
-    if(isset($_SESSION['admin_is_logged'])){
-
-        header('Location: admin_page.php');
-        exit();
-    }
-
-    if(isset($_SESSION['is_logged'])){
+    if(isset($_SESSION['is_logged']) || isset($_SESSION['admin_is_logged'])){
 
         header('Location: index.php');
         exit();
@@ -30,7 +24,7 @@ session_start();
             if(password_verify($password, $result['password']) && $result['id'] == 1){
 
                 $_SESSION['admin_is_logged'] = true;
-                header('Location: admin_page.php');
+                header('Location: index.php');
                 exit();
             }
             elseif (password_verify($password, $result['password'])){

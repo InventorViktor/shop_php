@@ -55,7 +55,11 @@
                 </form>
 
                 <?php
-                    if(!isset($_SESSION['is_logged'])){
+                    if(isset($_SESSION['admin_is_logged'])){
+
+                        echo '<a href="logout_admin.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
+                    }
+                    elseif(!isset($_SESSION['is_logged'])){
 
                         echo '<a href="login_page.php" class="btn btn-outline-light button-margin" role="button">Zaloguj</a>';
 

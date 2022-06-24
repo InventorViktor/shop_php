@@ -28,22 +28,16 @@
             <option value="baton">baton</option>
             <option value="lizak">lizak</option>
         </select><br>
-        obraz: <input type="file" name="jpg">
+        obraz:
+            <select name="jpg">
+                <option value="baton.jpg">baton.jpg</option>
+                <option value="lizak.jpg">lizak.jpg</option>
+            </select><br>
 
         <br>
 
         <input type="submit">
     </form><br><br>
-
-    <form action="a_remove_product.php" method="post">
-
-        Usuń produkt:<br>
-
-        Podaj id produktu:
-        <input type="number" name="id" required><br>
-
-        <input type="submit">
-    </form><br>
 
     <a href="logout_admin.php">Wyloguj</a>
 </body>
