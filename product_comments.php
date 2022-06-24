@@ -1,8 +1,9 @@
 <?php
+//need session to work
 
     require_once 'database.php';
 
-    $userComment = $db->prepare('SELECT users.name, comment FROM comments JOIN users where user_id=users.id and product_id= :id');
+    $userComment = $db->prepare('SELECT users.name, comments.id, comment FROM comments JOIN users where user_id=users.id and product_id= :id');
 
     $userComment->bindValue(":id", $_GET['id']);
     $userComment->execute();
@@ -26,9 +27,14 @@
                     <div class='card-body'>
                     
                     <h5 class='card-title'>{$commentRow['name']}</h5>
-                    <span class='card-text'>{$commentRow['comment']}</span> 
+                    <span class='card-text mr-5'>{$commentRow['comment']}</span>";
+
+                    if(isset($_SESSION['admin_is_logged'])){
+
+                        echo "<a href='a_remove_coment.php?comment_id={$commentRow['id']}&id={$_GET['id']}' class='btn btn-outline-danger' onclick='removeComment()'>Usuń komentarz</a>";
+                    }
                     
-                    </div>
+        echo        "</div>
                     
               </div>";
     }

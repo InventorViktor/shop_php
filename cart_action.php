@@ -13,6 +13,12 @@ echo '<script>
             }
           </script>';
 
+echo '<script>
+            function removeComment() {
+                alert("Komentarz został usunięty");
+            }
+          </script>';
+
 if(isset($_POST["add_to_cart"]))
 {
     if(isset($_SESSION["shopping_cart"]))
