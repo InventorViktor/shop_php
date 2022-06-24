@@ -4,6 +4,8 @@
         exit();
     }
 
+    require_once 'cart_action.php';
+
     //you need $_GET['id'] -> product id
     require_once 'database.php';
 
@@ -31,12 +33,6 @@
         '<div class="col-md-8 mt-2">
             '. $product_row["cena"] . " zł" .
         '</div>';
-
-    echo '<script>
-            function addProduct() {
-                alert("Dodano produkt do koszyka");
-            }
-          </script>';
 
     if(isset($_SESSION['is_logged'])){
 

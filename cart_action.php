@@ -1,7 +1,11 @@
 <?php
 //need session to work
 
-require_once 'database.php';
+echo '<script>
+            function addProduct() {
+                alert("Dodano produkt do koszyka");
+            }
+          </script>';
 
 if(isset($_POST["add_to_cart"]))
 {

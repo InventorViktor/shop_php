@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require_once 'cart_action.php';
 ?>
 
 <!DOCTYPE html>
