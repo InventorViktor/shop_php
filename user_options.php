@@ -41,6 +41,7 @@ if(!isset($_SESSION['is_logged'])){
 
                 <?php
 
+                    echo '<a href="cart_page.php" class="btn btn-outline-light button-margin mr-3" role="button">Koszyk</a>';
                     echo '<a href="logout_user.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
                 ?>
 
