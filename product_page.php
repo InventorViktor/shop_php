@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once 'cart_action.php';
 ?>
 
 <!DOCTYPE html>
@@ -27,20 +28,13 @@
 
             <div class="collapse navbar-collapse" id="mainmenu">
 
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item active">
                         <a href="index.php" class="nav-link"> Start</a>
                     </li>
 
                 </ul>
-
-                <form class="form-inline m-auto"> <!-- TODO: add action and method -->
-
-                    <input class="form-control mr-2 h-25" type="search" placeholder="Wyszukaj">
-                    <button type="submit" class="btn btn-outline-light">Znajdź</button>
-
-                </form>
 
                 <?php
                 if(!isset($_SESSION['is_logged'])){
@@ -49,6 +43,8 @@
 
                 } else {
 
+                    echo '<a href="cart_page.php" class="btn btn-outline-light button-margin mr-3" role="button">Koszyk</a>';
+                    echo '<a href="user_options.php" class="btn btn-outline-light button-margin mr-3" role="button">Konto</a>';
                     echo '<a href="logout_user.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
                 }
                 ?>
