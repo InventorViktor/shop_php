@@ -16,6 +16,14 @@
 </head>
 <body>
 
+<?php
+    if(isset($_SESSION['product_err'])){
+
+        echo "<span style='color: red;'>{$_SESSION['product_err']}</span>";
+        unset($_SESSION['product_err']);
+    }
+?>
+
     <form action="a_add_product.php" method="post">
         Dodaj produkt: <br>
         nazwa produktu: <input type="text" name="name" required><br>
