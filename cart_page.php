@@ -90,7 +90,15 @@ require_once 'cart_action.php';
                                 echo
                                     "<tr>
                                         <td>{$values['item_name']}</td>
-                                        <td>{$values['item_quantity']}</td>
+                                        <td class='text-right'>{$values['item_quantity']} 
+                                         
+                                        <form style='display: inline-block;' method='post' action='cart_page.php?action=add&id={$values['item_id']}'>
+                                              <input type='hidden' name='name' value='{$values['item_name']}'>
+                                              <input type='hidden' name='price' value='{$values['item_price']}'>
+                                              <input type='hidden' name='quantity' value='1'>
+                                              <button  class='btn btn-outline-primary btn-sm' name='add_to_cart' type='submit' onclick='addProduct()'>+</button>
+                                        </form>
+                                            
                                         <td>{$values['item_price']}</td>
                                         <td>{$price}</td>
                                         <td><a class='text-danger' href='cart_page.php?action=delete&id={$values['item_id']}'>Usuń</a></td>
