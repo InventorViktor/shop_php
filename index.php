@@ -85,6 +85,13 @@
             ?>
         </div>
 
+        <?php
+            if(isset($_SESSION['admin_is_logged'])){
+
+                echo "<a href='admin_page.php' class='btn btn-outline-success btn-block mt-4'>Dodaj produkt</a>";
+            }
+        ?>
+
     </main>
 
     <footer class="card-footer text-center border border-top-0 border-dark">
