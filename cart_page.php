@@ -117,6 +117,7 @@ require_once 'cart_action.php';
                                 </div>
                                  ";
 
+                            $_SESSION['final_price'] = $total;
                             echo '<a href="deliver_page.php" class="btn btn-outline-success btn-block">Przejdź dalej</a>';
 
                         } else {

@@ -41,8 +41,8 @@ if(!isset($_SESSION['is_logged'])){
 
                 <?php
 
-                    echo '<a href="cart_page.php" class="btn btn-outline-light button-margin mr-3" role="button">Koszyk</a>';
-                    echo '<a href="logout_user.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
+                echo '<a href="cart_page.php" class="btn btn-outline-light button-margin mr-3" role="button">Koszyk</a>';
+                echo '<a href="logout_user.php" class="btn btn-outline-light button-margin" role="button">Wyloguj</a>';
                 ?>
 
             </div>
@@ -55,14 +55,32 @@ if(!isset($_SESSION['is_logged'])){
     <main>
         <div class="row">
 
-                <div class="mb-3 mt-2 m-auto">
-                    <h1 class="h4">Ustawienia</h1>
-                </div>
+            <div class="mb-3 mt-2 m-auto">
+                <h1 class="h4">Historia zakupów</h1>
+            </div>
 
-                <a href="change_name_page.php" class="btn btn-outline-primary btn-block">Zmień imię</a>
-                <a href="change_password_page.php" class="btn btn-outline-primary btn-block mt-3">Zmień hasło</a>
-                <a href="user_history.php" class="btn btn-outline-primary btn-block mt-3">Historia zakupów</a>
-                <a href="delete_user_page.php" class="btn btn-outline-danger btn-block mt-5">Usuń konto</a>
+            <?php
+
+            require_once 'database.php';
+            $sort = $db->prepare("SELECT * FROM cart_history WHERE user_id = :id");
+            $sort->bindValue(':id', $_SESSION['is_logged']);
+            $sort->execute();
+
+            $i = 0;
+                while($row = $sort->fetch()){
+                    $i++;
+                    echo "<div class='card col-12'>
+                            <div class='card-body'>
+                            
+                            <h5 class='card-title'>Zamówienie nr. {$i}</h5>
+                            <p class='card-text'>Cena końcowa: {$row['price']} zł</p>
+                           
+                         
+                            </div>
+                      </div>";
+
+                }
+            ?>
 
 
         </div>
@@ -89,3 +107,4 @@ if(!isset($_SESSION['is_logged'])){
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
