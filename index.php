@@ -40,6 +40,8 @@
                             <a class="dropdown-item" href="index.php?type=all"> Wszystko</a>
                             <a class="dropdown-item" href="index.php?type=baton"> Batoniki</a>
                             <a class="dropdown-item" href="index.php?type=lizak"> Lizaki</a>
+                            <a class="dropdown-item" href="index.php?type=asc"> Cena rosnąco</a>
+                            <a class="dropdown-item" href="index.php?type=desc"> Cena malejąco</a>
 
                         </div>
 

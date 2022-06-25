@@ -15,6 +15,14 @@ elseif(!isset($_GET['type'])){
 
     $sort =  $db->query("SELECT * FROM produkty");
 }
+elseif($_GET['type'] == 'asc'){
+
+    $sort =  $db->query("SELECT * FROM produkty ORDER BY cena ASC");
+}
+elseif($_GET['type'] == 'desc'){
+
+    $sort =  $db->query("SELECT * FROM produkty ORDER BY cena DESC");
+}
 elseif($_GET['type'] == 'all'){
 
     $sort =  $db->query("SELECT * FROM produkty");
