@@ -57,7 +57,7 @@ if(!isset($_SESSION['is_logged'])){
     <main>
         <div class="row">
 
-            <form style="max-width: 400px; margin: auto;" method="post" action="order.php">
+            <form style="max-width: 400px; margin: auto;" method="post" action="delivery_page_end.php">
 
                 <div class="mb-3 mt-2 text-center">
                     <h1 class="h4">Uzupełnij dane do dostawy</h1>
@@ -106,6 +106,10 @@ if(!isset($_SESSION['is_logged'])){
 
                 </div>
 
+                <div class="mb-2">
+                    <input  type="radio" name="delivery" value="kur"> kurier <br>
+                    <input  type="radio" name="delivery" value="pacz"> paczkomat
+                </div>
                 <button class="btn btn-outline-success btn-block" type="submit">Potwierdz dane</button>
             </form>
 
