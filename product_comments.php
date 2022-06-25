@@ -32,6 +32,7 @@
                     if(isset($_SESSION['admin_is_logged'])){
 
                         echo "<a href='a_remove_coment.php?comment_id={$commentRow['id']}&id={$_GET['id']}' class='btn btn-outline-danger' onclick='removeComment()'>Usuń komentarz</a>";
+                        echo "<a href='a_change_coment_page.php?comment_id={$commentRow['id']}&id={$_GET['id']}' class='btn btn-outline-info'>Zmień komentarz</a>";
                     }
                     
         echo        "</div>
