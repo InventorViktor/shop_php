@@ -51,7 +51,7 @@ while($row = $sort->fetch()){
 
             //add to cart for users
             if(isset($_SESSION['is_logged'])){
-                echo "<form method='post' action='index.php?action=add&id={$row['id']}'>
+                echo "<form method='post' action='cukierki?action=add&id={$row['id']}'>
                           <input type='hidden' name='name' value='{$row['nazwa']}'>
                           <input type='hidden' name='price' value='{$row['cena']}'>
                           <input type='hidden' name='quantity' value='1'>
