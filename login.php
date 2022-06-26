@@ -3,7 +3,7 @@ session_start();
 
     if(isset($_SESSION['is_logged']) || isset($_SESSION['admin_is_logged'])){
 
-        header('Location: index.php');
+        header('Location: cukierki');
         exit();
     }
 
@@ -24,13 +24,13 @@ session_start();
             if(password_verify($password, $result['password']) && $result['id'] == 1){
 
                 $_SESSION['admin_is_logged'] = true;
-                header('Location: index.php');
+                header('Location: cukierki');
                 exit();
             }
             elseif (password_verify($password, $result['password'])){
 
                 $_SESSION['is_logged'] = $result['id'];
-                header('Location: index.php');
+                header('Location: cukierki');
                 exit();
             } else {
 

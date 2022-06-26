@@ -18,7 +18,7 @@
     <header>
 
         <nav class="navbar navbar-dark bg-dark navbar-border navbar-expand-lg">
-            <a class="navbar-brand" href="index.php"><img src="img/lollipop.png" width="32" height="32" alt="" class="d-inline-block align-bottom"> Cukierki.pl</a>
+            <a class="navbar-brand" href="cukierki"><img src="img/lollipop.png" width="32" height="32" alt="" class="d-inline-block align-bottom"> Cukierki.pl</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item active">
-                        <a href="index.php" class="nav-link"> Start</a>
+                        <a href="cukierki" class="nav-link"> Start</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -37,11 +37,11 @@
 
                         <div class="dropdown-menu">
 
-                            <a class="dropdown-item" href="index.php?type=all"> Wszystko</a>
-                            <a class="dropdown-item" href="index.php?type=baton"> Batoniki</a>
-                            <a class="dropdown-item" href="index.php?type=lizak"> Lizaki</a>
-                            <a class="dropdown-item" href="index.php?type=asc"> Cena rosnąco</a>
-                            <a class="dropdown-item" href="index.php?type=desc"> Cena malejąco</a>
+                            <a class="dropdown-item" href="cukierki?type=all"> Wszystko</a>
+                            <a class="dropdown-item" href="cukierki?type=baton"> Batoniki</a>
+                            <a class="dropdown-item" href="cukierki?type=lizak"> Lizaki</a>
+                            <a class="dropdown-item" href="cukierki?type=asc"> Cena rosnąco</a>
+                            <a class="dropdown-item" href="cukierki?type=desc"> Cena malejąco</a>
 
                         </div>
 
@@ -49,7 +49,7 @@
 
                 </ul>
 
-                <form class="form-inline m-auto" method="get" action="index.php"> <!-- TODO: add action and method -->
+                <form class="form-inline m-auto" method="get" action="cukierki"> <!-- TODO: add action and method -->
 
                     <input class="form-control mr-2 h-25" name="search" type="search" placeholder="Wyszukaj">
                     <button type="submit" class="btn btn-outline-light">Znajdź</button>

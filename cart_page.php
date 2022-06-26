@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['is_logged'])){
 
-    header("Location: index.php");
+    header("Location: cukierki");
     exit();
 }
 
@@ -29,7 +29,7 @@ require_once 'cart_action.php';
     <header>
 
         <nav class="navbar navbar-dark bg-dark navbar-border navbar-expand-lg">
-            <a class="navbar-brand" href="index.php"><img src="img/lollipop.png" width="32" height="32" alt="" class="d-inline-block align-bottom"> Cukierki.pl</a>
+            <a class="navbar-brand" href="cukierki"><img src="img/lollipop.png" width="32" height="32" alt="" class="d-inline-block align-bottom"> Cukierki.pl</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@ require_once 'cart_action.php';
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item active">
-                        <a href="index.php" class="nav-link"> Start</a>
+                        <a href="cukierki" class="nav-link"> Start</a>
                     </li>
 
                 </ul>

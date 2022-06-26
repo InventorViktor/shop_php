@@ -21,6 +21,6 @@ if(isset($_POST['comment']) && $_POST['comment'] != "") {
 
 } else {
 
-    header("Location: index.php");
+    header("Location: cukierki");
 }
 

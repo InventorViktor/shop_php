@@ -19,7 +19,7 @@ session_start();
     <header>
 
         <nav class="navbar navbar-dark bg-dark navbar-border navbar-expand-lg">
-            <a class="navbar-brand" href="index.php"><img src="img/lollipop.png" width="32" height="32" alt="" class="d-inline-block align-bottom"> Cukierki.pl</a>
+            <a class="navbar-brand" href="cukierki"><img src="img/lollipop.png" width="32" height="32" alt="" class="d-inline-block align-bottom"> Cukierki.pl</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@ session_start();
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link"> Start</a>
+                        <a href="cukierki" class="nav-link"> Start</a>
                     </li>
 
                 </ul>

@@ -3,7 +3,7 @@
 
     if($_SESSION['admin_is_logged'] != true){
 
-        header('Location: index.php');
+        header('Location: cukierki');
         exit();
     }
     ?>

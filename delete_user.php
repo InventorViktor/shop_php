@@ -3,7 +3,7 @@
 session_start();
 if(!isset($_SESSION['is_logged'])){
 
-    header("Location: index.php");
+    header("Location: cukierki");
     exit();
 }
 
@@ -18,4 +18,4 @@ $deleteUser->bindValue(':id', $_SESSION['is_logged']);
 $deleteUser->execute();
 
 unset($_SESSION['is_logged']);
-header("Location: index.php");
+header("Location: cukierki");

@@ -3,7 +3,7 @@
 
     if($_SESSION['admin_is_logged'] != true){
 
-        header('Location: index.php');
+        header('Location: cukierki');
         exit();
     }
 
@@ -14,4 +14,4 @@
     $removeProduct->bindValue(':id',$_GET["id"] );
     $removeProduct->execute();
 
-    header('Location: index.php');
+    header('Location: cukierki');
